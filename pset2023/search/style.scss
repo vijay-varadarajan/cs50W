@@ -1,0 +1,103 @@
+.heading{
+    text-align: center;
+    
+    font-size: 95px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+    a:hover{
+        color:#000000;
+    }
+}
+
+
+.searchbar{
+    display: flex;
+    border:0.3px solid rgb(186, 186, 186);
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: none;
+    height: 40px;
+    width: 500px;
+    margin: 15px;
+}
+
+
+.srchbar:hover{
+    box-shadow: 20px grey !important;
+}
+
+
+.searchbtn{
+    width: fit-content;
+    border: 0.2px #000000;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+
+.searchbtn:hover{
+    background-color: #e1dfdf;
+}
+
+
+a{
+    text-decoration: none;
+    color: rgb(59, 57, 57);
+    padding-right: 20px;
+}
+
+
+a:hover{
+    color: rgb(0, 30, 255);
+}
+
+
+sub{
+    font-size: 25px;
+}
+
+
+.advdiv{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.advbar{
+    width: 45%;
+}
+
+
+.advlabel{
+    width: 30%;
+}
+
+
+.advheading{
+    margin-left: 80px;
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+
+
+.advancebar{
+    border-bottom: 1px solid #ebebeb;
+    margin-bottom: 25px;
+}
+
+
+.advdivbtn{
+    margin-top: 20px;
+}
+
+
+.advbtn{
+    width: 80px;
+    background-color: rgb(13, 131, 241);
+    color: white;
+    border-color:black;
+    border-width: 0.5px;
+    padding: 5px;
+    text-align: center;
+}

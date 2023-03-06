@@ -1,0 +1,23 @@
+$color : red;
+
+div {
+    font-size: 18px;
+
+    p {
+        color: blue;
+    }
+
+    ul {
+        color: green;
+    }
+};
+
+h1 {
+    color: $color;
+}
+
+h2 {
+    ul {
+        color: $color;
+    }
+}

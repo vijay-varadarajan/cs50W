@@ -1,0 +1,52 @@
+To clone an existing github repo
+git clone <url>
+
+To add a file for tracking by github
+git add <filename>
+
+To commit changes with a commit message
+git commit -m "message"
+
+(Shortcut to add and commit simultaneously)
+git commit -am "message"
+
+To push committed changes to the repo
+git push
+
+To pull changes made on the repo by others
+git pull
+
+If a line is modified differently by two people, it might result in a
+merge conflict that needs to be resolved
+
+To see history of commits
+git log
+(Press q to exit)
+
+To reset to any previous commit version of the repository
+git reset --hard <commit_hash>
+
+To check the branch name currently in
+git branch
+
+To create a new branch
+git checkout -b <new_branch_name>
+
+To switch back to an existing branch
+git checkout <existing_branch_name>
+
+To merge code from an existing branch to current branch
+git merge <existing_branch_name>
+
+Pull requests to request the owner to accept your changes
+
+
+To create github pages website:
+# Create a repo with <username>.github.io
+# clone the new repo
+# Create a file with default name "index.html"
+# Make a simple html page
+# git add <filename>
+# git commit -m "First commit"
+# git push
+# This webpage can be opened by anybody using the url <username>.github.io

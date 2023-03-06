@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            Hello!
+        </title>
+        <style>
+            #flex-container {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            #grid {
+                background-color: pink;
+                display: grid;
+                padding: 20px;
+                grid-column-gap: 10px;
+                grid-row-gap: 10px;
+                grid-template-columns: 200px 200px auto;
+            }
+
+            .grid-item {
+                background-color: white;
+                font-size: 20px;
+                padding: 20px;
+                text-align: center;
+            }
+
+            #flex-container > div {
+                background-color: springgreen;
+                font-size: 20px;
+                margin: 20px;
+                padding: 20px;
+                width: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="flex-container">
+            <div>1. Demo of flexbox</div>
+            <div>2. Demo of flexbox</div>
+            <div>3. Demo of flexbox</div>
+            <div>4. Demo of flexbox</div>
+            <div>5. Demo of flexbox</div>
+            <div>6. Demo of flexbox</div>
+            <div>7. Demo of flexbox</div>
+            <div>8. Demo of flexbox</div>
+            <div>9. Demo of flexbox</div>
+            <div>10. Demo of flexbox</div>
+            <div>11. Demo of flexbox</div>
+        </div>
+
+        <div id="grid">
+            <div class="grid-item">1. grid item</div>
+            <div class="grid-item">2. grid item</div>
+            <div class="grid-item">3. grid item</div>
+            <div class="grid-item">4. grid item</div>
+            <div class="grid-item">5. grid item</div>
+            <div class="grid-item">6. grid item</div>
+            <div class="grid-item">7. grid item</div>
+        </div>
+    </body>
+</html>

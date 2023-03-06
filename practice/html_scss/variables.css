@@ -1,0 +1,31 @@
+/* Declare variables in scss using $variablename */
+ul {
+  font-size: 14px;
+  font-weight: bold;
+  color: green; }
+
+/* Nest properties rather than using parent child like below */
+div ol {
+  font-size: 19px;
+  color: green; }
+
+/* common properties can be combined into a single variable with %variablename
+    thiscan be used to extend other objects using @extend */
+.success, .danger, .warning {
+  font-size: 30px;
+  border: 5px solid black;
+  width: 500px;
+  height: 40px;
+  padding: 5px;
+  margin: 30px; }
+
+.success {
+  background-color: green; }
+
+.danger {
+  background-color: red; }
+
+.warning {
+  background-color: yellow; }
+
+/*# sourceMappingURL=variables.css.map */
