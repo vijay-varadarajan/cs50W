@@ -1,0 +1,56 @@
+pip3 install Django
+django-admin startproject PROJECT_NAME
+python manage.py runserver
+
+Project folder:
+    manage.py - used to execute commands on the django Project
+    settings.py - contains configuration settings which can be modified to control how this project works.
+    urls.py - table of contents for the web application
+
+A django project can contain multiple applications in it.
+
+Steps to begin a Django project:
+
+1, CREATE NEW DJANGO APPLICATION - python manage.py startapp APP_NAME
+
+2, Add APP_NAME to the list of Installed Apps in settings.py
+
+3, Create views in views.py for the new app:
+    - Views are somethings that we want the user to see.
+    - Views are created by creating functions
+    - for HTTP requests, import HttpResponse from django.http
+    - start with def index(request):
+    - return HttpResponse("....")
+
+4, Tell the app when to run a function in views.
+
+5, Create urls.py in the APP_NAME directory to store the list of accessible urls for that app
+
+6, In the APP_NAME/urls.py:
+    - import path from django.urls and views from .
+    - Define url using: 
+         urlpatterns = [ path ("<url_path>", views.<function to run>, name="<name of funtion (helps to reference later)>")]
+    - Leave <url_path> empty for default route
+
+7, Go to PROJECT_NAME/urls.py:
+    - This is a leader urls file that connects to multiple urls.py in all applications of the project.
+    - from django.urls import include
+    - Default url path named admin is configured to run at admin.site.urls
+    - Add to urlpatterns new path('\APP_NAME', include("hello.urls"))
+
+8, To create custom routes with dynamic responses:
+    - In views.py create a function with parameters <param_name>
+    - In PROJECT_NAME/urls.py call the function as path("<str:param_name>", views.fncname, name="fncname") 
+
+9, To render html templates, in the function:
+    - Inside a fnc in views: Return render (request, "APP_NAME/<template_name>.html")
+
+10, To create a template, inside APP_NAME mkdir templates/APP_NAME and create index.html in it.
+
+11, To render a dynamic html page with variable:
+    - inside a fnc in views: Return render (request, "APP_NAME/<template_name>.html", {<a python dict of key:value pairs>})
+    - use jinja syntax to plug in the name of the variable (key in the above dict)
+
+12, The value of the variable var in the url APP_NAME/<var> gets passed as argument to the function <fncname> when it is called in APP_NAME/urls.py which renders a template APP_NAME/<template_name>.html with the value passed into the template that is displayed thro jinja.
+APP_NAME/urls.py -> views.py -> APP_NAME/<template_name>.html
+
