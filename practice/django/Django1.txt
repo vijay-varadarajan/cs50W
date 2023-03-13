@@ -54,3 +54,11 @@ Steps to begin a Django project:
 12, The value of the variable var in the url APP_NAME/<var> gets passed as argument to the function <fncname> when it is called in APP_NAME/urls.py which renders a template APP_NAME/<template_name>.html with the value passed into the template that is displayed thro jinja.
 APP_NAME/urls.py -> views.py -> APP_NAME/<template_name>.html
 
+13, For static css files: 
+    - Create static folder inside APP_NAME folder
+    - Create a folder with APP_NAME inside static and code styles.css in it.
+    - Write the required css.
+
+14, To include css in the html, in index.html:
+    - On top {% load static %}
+    - In head - <link href="{% static "APP_NAME/styles.css"}" rel="stylesheet"> 
